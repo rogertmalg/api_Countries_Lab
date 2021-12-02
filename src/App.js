@@ -6,7 +6,7 @@ import CountryContainer from './containers/CountryContainer';
 function App() {
   return (
     <>
-    <h1>Countries</h1>
+    <h1>CountryWiki</h1>
     <hr/>
     <CountryContainer />
     </>

@@ -1,4 +1,5 @@
 body {
+  background-color: rgb(218, 113, 99);
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -17,17 +18,25 @@ code {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  background-color: lavender;
 }
 
 .component {
   margin: 10px;
-  
+  height: 700px;
+  overflow: scroll;
 }
 
 #favList {
   list-style: none;
 }
+
+.button {
+  background-color: transparent;
+  border: none;
+  font-size: 200%;
+  cursor: pointer;
+}
+
 
 
 

@@ -30,7 +30,7 @@ const CountryContainer = () => {
     return (
         <div class='container'>
             <CountryList countries={countries} onCountrySelected={onCountrySelected}/>
-            <CountryDetail country={selectedCountry} onFavSelected={onFavSelected}/>
+            <CountryDetail country={selectedCountry} onFavSelected={onFavSelected} favCountriesList={favCountriesList}/>
             <FavCountries favCountriesList={favCountriesList} />
         </div>
 
