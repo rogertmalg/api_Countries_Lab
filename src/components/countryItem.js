@@ -1,9 +1,9 @@
 import React from "react";
-import CountryList from "./countryList";
 
-const CountryItem = () => {
+
+const CountryItem = ({country}) => {
     return(
-        <li>Country</li>
+        <li>{country.name.common} - population: {country.population}</li>
     )
 };
 

@@ -1,12 +1,11 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
-import Country_Container from './containers/country_Container';
-import CountryList from './components/countryList';
+import CountryContainer from './containers/CountryContainer';
+
 
 function App() {
   return (
-    <Country_Container />
-    
+    <CountryContainer />
   );
 }
 
