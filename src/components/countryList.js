@@ -10,7 +10,7 @@ const CountryList = ({countries, onCountrySelected}) => {
 
 
     return (
-        <div>
+        <div class='component'>
             <WorldPop countries={countries} />
             <ul>
                 {CountriesItems}

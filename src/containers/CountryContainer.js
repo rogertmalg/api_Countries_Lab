@@ -6,7 +6,8 @@ import FavCountries from '../components/favCountries';
 const CountryContainer = () => {
 
     const [countries, setCountries] = useState([]);
-    const [ selectedCountry, setSelectedCountry] = useState(null)
+    const [ selectedCountry, setSelectedCountry] = useState(null);
+    const [ favCountriesList, setSelectedFavCountry] = useState([]);
 
     useEffect(() => {
       getCountries();
@@ -22,12 +23,15 @@ const CountryContainer = () => {
         setSelectedCountry(country);
     }
 
+    const onFavSelected = (favCountry) => {
+        setSelectedFavCountry([...favCountriesList, favCountry])
+    }
+
     return (
-        <div>
-            <h1>Countries</h1>
+        <div class='container'>
             <CountryList countries={countries} onCountrySelected={onCountrySelected}/>
-            <CountryDetail selectedCountry={selectedCountry}/>
-            <FavCountries/>
+            <CountryDetail country={selectedCountry} onFavSelected={onFavSelected}/>
+            <FavCountries favCountriesList={favCountriesList} />
         </div>
 
         
