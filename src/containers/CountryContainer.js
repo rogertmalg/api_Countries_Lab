@@ -6,6 +6,7 @@ import FavCountries from '../components/favCountries';
 const CountryContainer = () => {
 
     const [countries, setCountries] = useState([]);
+    const [ selectedCountry, setSelectedCountry] = useState(null)
 
     useEffect(() => {
       getCountries();
@@ -17,11 +18,15 @@ const CountryContainer = () => {
         .then(countries => setCountries(countries))
     };
     
+    const onCountrySelected = (country) => {
+        setSelectedCountry(country);
+    }
+
     return (
         <div>
             <h1>Countries</h1>
-            <CountryList countries={countries}/>
-            <CountryDetail/>
+            <CountryList countries={countries} onCountrySelected={onCountrySelected}/>
+            <CountryDetail selectedCountry={selectedCountry}/>
             <FavCountries/>
         </div>
 

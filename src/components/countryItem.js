@@ -1,9 +1,9 @@
 import React from "react";
 
 
-const CountryItem = ({country}) => {
+const CountryItem = ({country, onCountrySelected}) => {
     return(
-        <li>{country.name.common} - population: {country.population}</li>
+        <li onClick={ () => {onCountrySelected(country) } }>{country.name.common}</li>
     )
 };
 
